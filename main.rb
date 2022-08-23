@@ -25,16 +25,10 @@ def start
       puts "P1: #{lives.score1}/3 vs P2: #{lives.score2}/3"
     end
 
-    if player == 1
-      player = 2
-    elsif player == 2
-      player = 1
-    end
+    player == 1 ? player = 2 : player = 1
 
-    if lives.score1 != 0 && lives.score2 != 0
-      puts "----- NEW TURN -----"
-    end
-    
+    lives.score1 != 0 && lives.score2 != 0 ? (puts "----- NEW TURN -----") : ""
+
     turn = Turn.new
   
   end 
