@@ -1,4 +1,4 @@
-class Lives
+class Life
   attr_accessor :score1, :score2
   def initialize
     @score1 = 3

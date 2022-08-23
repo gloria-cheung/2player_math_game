@@ -4,7 +4,7 @@ require './lives'
 def start
   player = 1
   turn = Turn.new
-  lives = Lives.new
+  lives = Life.new
 
   while lives.score1 != 0 && lives.score2 != 0
     puts "Player #{player}: What does #{turn.num1} plus #{turn.num2} equal?"
