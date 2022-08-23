@@ -31,11 +31,23 @@ def start
       player = 1
     end
 
-    puts "----- NEW TURN -----"
+    if lives.score1 != 0 && lives.score2 != 0
+      puts "----- NEW TURN -----"
+    end
+    
     turn = Turn.new
   
   end 
 
+  
+  if lives.score1 == 0
+    puts "Player 2 wins with a score of #{lives.score2}/3"
+  else
+    puts "Player 1 wins with a score of #{lives.score1}/3"
+  end
+
+  puts "----- GAME OVER -----"
+  
 end
 
 start
